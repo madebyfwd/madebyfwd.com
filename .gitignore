@@ -1,0 +1,4 @@
+.DS_Store
+# Draft avatars and GitHub profile images stay local (not part of the site)
+assets/avatar-options/
+assets/github-*.png

@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Madebyfwd — products by FwdWorks</title>
+  <meta name="description" content="Madebyfwd is home to the products FwdWorks builds: wmojito, fwdbuilder, iesto, Awesome Tabs and more.">
+  <meta property="og:title" content="Madebyfwd — products by FwdWorks">
+  <meta property="og:description" content="We build software worth using. One idea at a time, moving forward.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Reusable icons (Lucide, MIT). Use with <svg class="icon"><use href="#i-name"/></svg> -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+    <symbol id="i-sprout" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></symbol>
+    <symbol id="i-blocks" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="7" x="14" y="3" rx="1"/><path d="M10 21V8a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1H3"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="m19 9-5 5-4-4-3 3"/></symbol>
+    <symbol id="i-panel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 3v18"/><path d="M13 8h4"/><path d="M13 12h4"/><path d="M13 16h4"/></symbol>
+    <symbol id="i-rocket" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></symbol>
+    <symbol id="i-flask" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2"/><path d="M8.5 2h7"/><path d="M7 16h10"/></symbol>
+    <symbol id="i-bot" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+    <symbol id="i-zap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></symbol>
+    <symbol id="i-house" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+    <!-- hand-drawn underline stroke, used inside .mark -->
+    <symbol id="i-github" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-5-2"/></symbol>
+    <symbol id="i-arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></symbol>
+    <symbol id="underline" viewBox="0 0 200 12" preserveAspectRatio="none"><path d="M3 10C24 5 70 3.5 197 3" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" vector-effect="non-scaling-stroke"/></symbol>
+  </defs>
+</svg>
+
+<div class="wrap">
+
+  <header class="site-header">
+    <a class="wordmark" href="/">
+      <b>madeby<span>fwd</span></b>
+      <small>by FwdWorks</small>
+    </a>
+    <nav>
+      <a href="#apps">Apps</a>
+      <a href="#lab" class="hide-sm">Lab</a>
+      <a href="#how">How we work</a>
+    </nav>
+  </header>
+
+  <!-- ================= HERO + ABOUT ================= -->
+  <div class="hero-grid">
+    <section class="hero">
+      <p class="eyebrow">FwdWorks · AI-native software studio</p>
+      <h1 class="display">We build software<br><span class="marker">worth using.</span></h1>
+      <p class="hero-sub display">Better software, built differently.</p>
+      <p class="lede">
+        Madebyfwd is home to the products we build at <strong>FwdWorks</strong>. We rethink software for
+        the AI era, finding better ways to solve everyday problems. From growing your business and building with AI to understanding the markets and staying
+        <span class="mark">organized<svg aria-hidden="true"><use href="#underline"/></svg></span>.
+      </p>
+      <p class="hand">One idea at a time, moving forward →</p>
+      <nav class="hero-links" aria-label="Jump to">
+        <a href="#apps">Explore our apps ↓</a>
+        <span aria-hidden="true">·</span>
+        <a href="#how">How we work →</a>
+      </nav>
+    </section>
+
+    <aside class="about" id="about">
+      <figure class="avatar">
+        <img src="assets/martin.png" alt="Cartoon drawing of Martin" width="320" height="320">
+      </figure>
+      <div class="about-text">
+        <h2 class="display">Hi, I'm <span class="marker">Martin</span> 👋</h2>
+        <p>
+          I co-founded and sold <strong>iWeb</strong> and <strong>Wealthica</strong>, then helped bring
+          Wealthica's technology into <strong>Wealthsimple</strong>.
+        </p>
+        <p>
+          After decades of building technology companies, I'm now exploring what a solo founder
+          can accomplish with AI. FwdWorks is where I turn my ideas into products, working alongside a
+          crew of AI agents.
+        </p>
+        <p class="hand">That's the "we" 🤖</p>
+      </div>
+    </aside>
+  </div>
+
+  <!-- ================= FIGURES ================= -->
+  <div class="figures">
+    <div class="figure">
+      <div class="num">4</div>
+      <div class="label">Apps out in the world</div>
+      <svg class="ghost" aria-hidden="true"><use href="#i-rocket"/></svg>
+    </div>
+    <div class="figure">
+      <div class="num">4</div>
+      <div class="label">More in the making</div>
+      <svg class="ghost" aria-hidden="true"><use href="#i-flask"/></svg>
+    </div>
+    <div class="figure">
+      <div class="num">3</div>
+      <div class="label">Platforms and counting</div>
+      <svg class="ghost" aria-hidden="true"><use href="#i-blocks"/></svg>
+    </div>
+    <div class="figure">
+      <div class="num">1</div>
+      <div class="label">Founder, a crew of AI agents</div>
+      <svg class="ghost" aria-hidden="true"><use href="#i-heart"/></svg>
+    </div>
+  </div>
+
+  <!-- ================= APPS ================= -->
+  <section id="apps">
+    <div class="section-head">
+      <p class="eyebrow">The apps</p>
+      <h2 class="display">Things we've <span class="marker">shipped</span></h2>
+      <p class="hand">click around, they're all real ↓</p>
+    </div>
+
+    <!--
+      To add an app: copy one <a class="app"> block below.
+      Status pills: class="pill live" | "pill beta" | "pill idea"
+      Add class "featured" to make a card span the full width.
+    -->
+    <div class="apps">
+
+      <a class="app featured" href="https://fwdbuilder.com" target="_blank" rel="noopener">
+        <div class="app-top">
+          <div class="app-logo"><picture>
+            <source srcset="assets/logos/fwdbuilder-dark.svg" media="(prefers-color-scheme: dark)">
+            <img src="assets/logos/fwdbuilder-light.svg" alt="" width="56" height="56">
+          </picture></div>
+          <h3 class="app-name display"><span class="marker">fwdbuilder</span></h3>
+        </div>
+        <div class="app-pills">
+              <span class="pill beta"><span class="dot"></span>Early access</span>
+              <span class="pill">Web + Claude Code</span>
+            </div>
+        <p class="app-tag">Build with agents. Stay on track.</p>
+        <p class="app-desc">
+          A shared home for building apps with AI, organized by app. Product, ops and leadership
+          all take part, and engineers stay in control of what ships.
+        </p>
+        <div class="app-foot">
+          <span class="app-link">fwdbuilder.com <svg class="icon"><use href="#i-arrow"/></svg></span>
+          <span class="app-note">how we build everything here 🛠️</span>
+        </div>
+        <svg class="ghost" aria-hidden="true"><use href="#i-bot"/></svg>
+      </a>
+      <a class="app" href="https://wmojito.com" target="_blank" rel="noopener">
+        <div class="app-top">
+          <div class="app-logo"><img src="assets/logos/wmojito.svg" alt="" width="56" height="56"></div>
+          <h3 class="app-name display"><span class="marker">wmojito</span></h3>
+        </div>
+        <div class="app-pills">
+              <span class="pill live"><span class="dot"></span>Live</span>
+              <span class="pill">Web app</span>
+              <span class="pill">SEO &amp; content</span>
+            </div>
+        <p class="app-tag">We grow your search traffic. You take care of your customers.</p>
+        <p class="app-desc">
+          wmojito finds the searches your customers make, plans and drafts articles in your voice,
+          publishes them to WordPress, then tracks your growth in Google and in AI answers.
+        </p>
+        <div class="app-foot">
+          <span class="app-link">wmojito.com <svg class="icon"><use href="#i-arrow"/></svg></span>
+          <span class="app-note">the perfect mix for growth 🍹</span>
+        </div>
+        <svg class="ghost" aria-hidden="true"><use href="#i-sprout"/></svg>
+      </a>
+
+
+      <a class="app" href="https://iesto.com" target="_blank" rel="noopener">
+        <div class="app-top">
+          <div class="app-logo"><img src="assets/logos/iesto.png" alt="" width="56" height="56"></div>
+          <h3 class="app-name display"><span class="marker">iesto</span></h3>
+        </div>
+        <div class="app-pills">
+              <span class="pill live"><span class="dot"></span>Live</span>
+              <span class="pill">Web app</span>
+            </div>
+        <p class="app-tag">Stocks &amp; AI: what moved, and why.</p>
+        <p class="app-desc">
+          Each session's most unusual-volume US and Canadian movers, paired with the stories that
+          explain them. Also in French at qc.iesto.com.
+        </p>
+        <div class="app-foot">
+          <span class="app-link">iesto.com <svg class="icon"><use href="#i-arrow"/></svg></span>
+        </div>
+        <svg class="ghost" aria-hidden="true"><use href="#i-chart"/></svg>
+      </a>
+
+      <!-- TODO: replace href with the Chrome Web Store listing once published -->
+      <a class="app" href="#" >
+        <div class="app-top">
+          <div class="app-logo pad"><img src="assets/logos/awesome-tabs.png" alt="" width="40" height="40"></div>
+          <h3 class="app-name display"><span class="marker">Awesome Tabs</span></h3>
+        </div>
+        <div class="app-pills">
+              <span class="pill live"><span class="dot"></span>Free</span>
+              <span class="pill">Chrome extension</span>
+            </div>
+        <p class="app-tag">Vertical tabs, so you never lose a tab.</p>
+        <p class="app-desc">
+          A tab sidebar for Chrome with automatic grouping and session autosave. Close the window,
+          come back tomorrow, everything's still there.
+        </p>
+        <div class="app-foot">
+          <span class="app-link">Get the extension <svg class="icon"><use href="#i-arrow"/></svg></span>
+        </div>
+        <svg class="ghost" aria-hidden="true"><use href="#i-panel"/></svg>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ================= LAB ================= -->
+  <section id="lab">
+    <div class="section-head">
+      <p class="eyebrow">In the lab</p>
+      <h2 class="display">What's <span class="marker">cooking</span></h2>
+      <p class="hand">not ready yet, but on their way</p>
+    </div>
+
+    <div class="lab">
+      <a class="lab-item" href="https://fwdsignal.com" target="_blank" rel="noopener">
+        <div class="app-logo"><img src="assets/logos/fwdsignal.png" alt="" width="44" height="44"></div>
+        <div>
+          <h3 class="display">FWD Signal <span class="pill beta"><span class="dot"></span>Private beta</span></h3>
+          <p>A daily brief of the 5 things that move you forward. Your personal chief of staff.</p>
+        </div>
+      </a>
+      <div class="lab-item">
+        <div class="app-logo"><svg class="icon" aria-hidden="true"><use href="#i-target"/></svg></div>
+        <div>
+          <h3 class="display">wealtyh <span class="pill idea"><span class="dot"></span>Planning</span></h3>
+          <p>Your portfolio's news, not the market's. What moved in your holdings, and why.</p>
+        </div>
+      </div>
+      <div class="lab-item">
+        <div class="app-logo"><svg class="icon" aria-hidden="true"><use href="#i-send"/></svg></div>
+        <div>
+          <h3 class="display">FWD Reach <span class="pill idea"><span class="dot"></span>Planning</span></h3>
+          <p>A newsletter system. Write it, send it, and grow the list that reads it.</p>
+        </div>
+      </div>
+      <div class="lab-item">
+        <div class="app-logo"><svg class="icon" aria-hidden="true"><use href="#i-house"/></svg></div>
+        <div>
+          <h3 class="display">FwdHome Studio <span class="pill beta"><span class="dot"></span>Coming soon</span></h3>
+          <p>Build your home. Keep it all together. Plans, 3D models, materials, budgets and decisions for your build or renovation, organized room by room.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= HOW WE WORK ================= -->
+  <section id="how">
+    <div class="section-head">
+      <p class="eyebrow">How we work</p>
+      <h2 class="display">Decades of experience. <span class="marker">A new way to build.</span></h2>
+      <p class="section-lede">
+        FwdWorks brings together decades of experience building technology companies and the possibilities
+        of AI-native software development. One founder, a crew of AI agents, and a growing collection of products.
+      </p>
+    </div>
+
+    <div class="principles">
+      <div class="principle">
+        <div class="chip"><svg class="icon"><use href="#i-target"/></svg></div>
+        <h3 class="display">Solve one thing well</h3>
+        <p>Every app starts with a problem we had ourselves. If it doesn&rsquo;t earn a daily spot, it doesn&rsquo;t ship.</p>
+      </div>
+      <div class="principle">
+        <div class="chip"><svg class="icon"><use href="#i-zap"/></svg></div>
+        <h3 class="display">Ship, then sharpen</h3>
+        <p>Get it in front of real people fast, listen hard, and keep polishing what they actually use.</p>
+      </div>
+      <div class="principle">
+        <div class="chip"><svg class="icon"><use href="#i-bot"/></svg></div>
+        <h3 class="display">Built with AI agents</h3>
+        <p>AI-native from day one. We turned how we build into fwdbuilder, and humans stay in charge.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= BUILD LOG (GitHub activity, loaded by activity.js) ================= -->
+  <section id="log">
+    <div class="section-head log-head">
+      <div>
+        <p class="eyebrow">Build log</p>
+        <h2 class="display">Building in the open. <span class="marker">Every day counts.</span></h2>
+        <p class="section-lede">
+          Every square is a day of commits. FwdWorks got going in September 2026,
+          and the graph has been filling up ever since.
+        </p>
+      </div>
+      <a class="gh-link" href="https://github.com/atchoooo"><svg class="icon"><use href="#i-github"/></svg> atchoooo <svg class="icon sm"><use href="#i-arrow-up-right"/></svg></a>
+    </div>
+
+    <div class="gh-card" data-gh-user="atchoooo" data-gh-start="2026-09-01">
+      <p class="gh-total"><strong data-gh-total>&nbsp;</strong> <span>contributions in the last year</span></p>
+      <div class="gh-scroll">
+        <div class="gh-graph" data-gh-graph aria-label="GitHub contribution graph"></div>
+      </div>
+      <div class="gh-legend"><span>Less</span><i class="l0"></i><i class="l1"></i><i class="l2"></i><i class="l3"></i><i class="l4"></i><span>More</span></div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <!-- TODO: confirm the contact address -->
+  <section class="contact">
+    <div>
+      <h2 class="display">Got an idea? <span class="marker">Say hi.</span></h2>
+      <p>Questions, partnerships, or just want to tell us what you'd like us to build next.</p>
+    </div>
+    <a class="btn" href="mailto:hello@fwdworks.io"><svg class="icon"><use href="#i-mail"/></svg> hello@fwdworks.io</a>
+  </section>
+
+  <footer class="site-footer">
+    <span>© 2026 <a href="https://fwdworks.io">FwdWorks</a>. Madebyfwd is the home of its products.</span>
+    <span>Made with care, moving forward.</span>
+  </footer>
+
+</div>
+<script src="activity.js" defer></script>
+</body>
+</html>
