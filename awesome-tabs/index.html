@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Awesome Tabs — vertical tabs for Chrome</title>
+  <meta name="description" content="Awesome Tabs is a free Chrome extension: a vertical tab sidebar with automatic grouping, session autosave and sleeping tabs. Your tabs never leave your computer.">
+  <meta property="og:title" content="Awesome Tabs — vertical tabs for Chrome">
+  <meta property="og:description" content="A tab sidebar with automatic grouping and session autosave, so you never lose a tab.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/assets/logos/awesome-tabs.png" type="image/png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/awesome-tabs/page.css">
+</head>
+<body>
+
+<!-- Icons (Lucide, MIT) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+    <symbol id="i-panel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 3v18"/><path d="M13 8h4"/><path d="M13 12h4"/><path d="M13 16h4"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></symbol>
+    <symbol id="i-history" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l4 2"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+    <symbol id="i-dock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M8 3v18"/></symbol>
+  </defs>
+</svg>
+
+<div class="wrap">
+
+  <header class="site-header">
+    <a class="wordmark" href="/">
+      <b>madeby<span>fwd</span></b>
+      <small>by FwdWorks</small>
+    </a>
+    <nav>
+      <a href="/#apps">Apps</a>
+      <a href="#features">Features</a>
+      <a href="/awesome-tabs/privacy/">Privacy</a>
+    </nav>
+  </header>
+
+  <div class="at-hero">
+    <section>
+      <div class="app-top">
+        <div class="app-logo pad"><img src="/assets/logos/awesome-tabs.png" alt="" width="40" height="40"></div>
+        <div class="app-pills">
+          <span class="pill beta"><span class="dot"></span>Coming to Chrome</span>
+          <span class="pill">Free</span>
+        </div>
+      </div>
+      <h1 class="display">Vertical tabs, so you <span class="marker">never lose a tab.</span></h1>
+      <p class="lede">
+        Awesome Tabs puts your tabs in a sidebar, sorts them into groups for you and saves every
+        session as you go. Close the window, come back tomorrow, everything's still there.
+      </p>
+      <div class="cta">
+        <!--
+          Once the extension is published, replace the <span> below with:
+          <a class="btn" href="https://chromewebstore.google.com/detail/REPLACE_WITH_ID">Add to Chrome <svg class="icon"><use href="#i-arrow"/></svg></a>
+          and change the "Coming to Chrome" pill (here and on the home page) to: <span class="pill live"><span class="dot"></span>Live</span>
+        -->
+        <span class="btn soon" aria-disabled="true">Coming soon to the Chrome Web Store</span>
+        <span class="fine">Free · Chrome 121 or later</span>
+      </div>
+      <p class="hand">built for people with way too many tabs open</p>
+    </section>
+
+    <!-- Illustration of the sidebar. TODO: swap for real screenshots (1280×800 also works for the store listing). -->
+    <figure class="mock" role="img" aria-label="Illustration: the Awesome Tabs sidebar listing grouped tabs next to a web page">
+      <div class="mock-side">
+        <div class="mock-nav"><span class="on">Tabs</span><span>Sessions</span><span>Settings</span></div>
+        <div class="mock-search">Search tabs ( / )</div>
+        <div class="mock-stats">24 tabs · 9 awake · 3 groups</div>
+        <div class="mock-list">
+          <div class="m-group" style="--gc:#1a73e8"><span class="m-pill">Dev</span><span class="m-count">4</span></div>
+          <div class="m-tab on m-in" style="--gc:#1a73e8"><span class="fav" style="--fc:#24292f">G</span><span class="t">Pull request #42 · awesome-tabs</span></div>
+          <div class="m-tab m-in" style="--gc:#1a73e8"><span class="fav" style="--fc:#f48024">S</span><span class="t">How to debounce in JavaScript</span></div>
+          <div class="m-tab m-in" style="--gc:#1a73e8"><span class="fav" style="--fc:#0b57d0">C</span><span class="t">chrome.tabGroups API reference</span></div>
+          <div class="m-tab zz m-in" style="--gc:#1a73e8"><span class="fav" style="--fc:#555">M</span><span class="t">MDN: Array.prototype.flat</span><span class="z">💤</span></div>
+          <div class="m-group" style="--gc:#188038"><span class="m-pill">Workspace</span><span class="m-count">3</span></div>
+          <div class="m-tab m-in" style="--gc:#188038"><span class="fav" style="--fc:#ea4335">M</span><span class="t">Inbox (12)</span></div>
+          <div class="m-tab m-in" style="--gc:#188038"><span class="fav" style="--fc:#1e8e3e">S</span><span class="t">Q4 planning sheet</span></div>
+          <div class="m-tab zz m-in" style="--gc:#188038"><span class="fav" style="--fc:#4285f4">D</span><span class="t">Launch checklist</span><span class="z">💤</span></div>
+          <div class="m-group" style="--gc:#d93025"><span class="m-pill">Video</span><span class="m-count">2</span></div>
+          <div class="m-tab m-in" style="--gc:#d93025"><span class="fav" style="--fc:#ff0000">Y</span><span class="t">Lo-fi beats to code to</span></div>
+          <div class="m-tab zz m-in" style="--gc:#d93025"><span class="fav" style="--fc:#ff0000">Y</span><span class="t">Conference keynote</span><span class="z">💤</span></div>
+          <div class="m-tab"><span class="fav" style="--fc:#7c3aed">W</span><span class="t">Weather this week</span></div>
+        </div>
+      </div>
+      <div class="mock-page" aria-hidden="true"><i class="h"></i><i></i><i style="width:85%"></i><i style="width:70%"></i><i class="b"></i><i></i><i style="width:60%"></i></div>
+    </figure>
+  </div>
+
+  <section id="features">
+    <div class="section-head">
+      <p class="eyebrow">What it does</p>
+      <h2 class="display">Your tabs, <span class="marker">finally organized</span></h2>
+    </div>
+    <div class="features">
+      <div class="feature">
+        <div class="chip"><svg class="icon"><use href="#i-panel"/></svg></div>
+        <h3 class="display">Vertical tabs</h3>
+        <p>Full titles in a sidebar, with pinned tabs, groups, drag and drop, and every window in one list if you want it.</p>
+      </div>
+      <div class="feature">
+        <div class="chip"><svg class="icon"><use href="#i-layers"/></svg></div>
+        <h3 class="display">Automatic grouping</h3>
+        <p>Tabs are grouped as you open them, by your own rules or by website. Groups you make yourself are never touched.</p>
+      </div>
+      <div class="feature">
+        <div class="chip"><svg class="icon"><use href="#i-history"/></svg></div>
+        <h3 class="display">Session autosave</h3>
+        <p>Every window, tab and group is saved as you go. Closed a window by mistake, or Chrome crashed? Restore it in one click, or automatically on startup.</p>
+      </div>
+      <div class="feature">
+        <div class="chip"><svg class="icon"><use href="#i-moon"/></svg></div>
+        <h3 class="display">Sleeping tabs</h3>
+        <p>Tabs you haven't used for 30 minutes go to sleep and free their memory, then reload when you click them. Calls and music stay awake. Adjustable, or off.</p>
+      </div>
+      <div class="feature">
+        <div class="chip"><svg class="icon"><use href="#i-search"/></svg></div>
+        <h3 class="display">Find anything</h3>
+        <p>Press <strong>/</strong> to search titles and addresses. Close duplicates in one click, and see which tabs are awake, sleeping or playing audio.</p>
+      </div>
+      <div class="feature">
+        <div class="chip"><svg class="icon"><use href="#i-dock"/></svg></div>
+        <h3 class="display">Side panel or docked</h3>
+        <p>Use Chrome's side panel, or a slim docked window that sits against your browser at any width and follows it around.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="private">
+    <h2 class="display">Your tabs stay <span class="marker">on your computer</span></h2>
+    <ul>
+      <li>Sessions and settings are stored locally in Chrome. Nothing about your tabs is ever sent anywhere.</li>
+      <li>No analytics, no tracking, no ads.</li>
+      <li>No access to the content of the pages you visit.</li>
+      <li>Read the <a href="/awesome-tabs/privacy/">privacy policy</a>.</li>
+    </ul>
+  </section>
+
+  <footer class="site-footer">
+    <span>© 2026 <a href="https://fwdworks.io">FwdWorks</a>. Awesome Tabs is <a href="/">made by fwd</a>.</span>
+    <span><a href="/awesome-tabs/privacy/">Privacy</a> · <a href="mailto:hello@fwdworks.io">hello@fwdworks.io</a></span>
+  </footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+/* Awesome Tabs product + privacy pages. Builds on /styles.css. */
+
+.crumbs { font-size: 0.9rem; color: var(--muted); margin: 0 0 1.25rem; }
+.crumbs a { color: var(--muted); text-decoration: none; }
+.crumbs a:hover { color: var(--fg); }
+
+/* ---------- hero ---------- */
+.at-hero { display: grid; gap: 2.5rem; align-items: center; padding: 2rem 0 4rem; }
+@media (min-width: 900px) { .at-hero { grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: 3rem; padding: 3rem 0 5rem; } }
+.at-hero .app-top { margin-bottom: 1.25rem; }
+.at-hero h1 { font-size: clamp(2.4rem, 5.5vw, 3.75rem); margin: 0; }
+.at-hero .lede { margin: 1.1rem 0 0; font-size: 1.15rem; color: var(--muted); max-width: 34rem; }
+.cta { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 1rem; margin-top: 1.75rem; }
+.btn.soon { background: var(--soft); color: var(--muted); box-shadow: inset 0 0 0 1px var(--line); cursor: default; }
+.btn.soon:hover { filter: none; }
+.cta .fine { font-size: 0.85rem; color: var(--muted); }
+.at-hero .hand { font-size: 1.4rem; margin: 1.25rem 0 0; }
+
+/* ---------- sidebar mock (stands in for screenshots) ---------- */
+.mock {
+  --m-bg: #fff; --m-bg2: #f4f5f7; --m-fg: #1f2329; --m-fg3: #8a9099; --m-line: #e3e5e9; --m-accent: #4f46e5; --m-active: #e3e8ff;
+  display: flex;
+  border-radius: 0.9rem;
+  overflow: hidden;
+  background: var(--m-bg2);
+  box-shadow: 0 0 0 1px var(--line), 0 20px 50px -20px rgb(0 0 0 / 0.25);
+  height: 26rem;
+  font: 12.5px/1.35 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: var(--m-fg);
+}
+@media (prefers-color-scheme: dark) {
+  .mock { --m-bg: #1f2023; --m-bg2: #28292d; --m-fg: #e8eaed; --m-fg3: #80858d; --m-line: #36383d; --m-accent: #8b85ff; --m-active: #2f3360; }
+}
+.mock-side { width: 15.5rem; flex: none; background: var(--m-bg); border-right: 1px solid var(--m-line); display: flex; flex-direction: column; }
+.mock-nav { display: flex; gap: 2px; padding: 8px 8px 0; border-bottom: 1px solid var(--m-line); }
+.mock-nav span { padding: 5px 9px; color: var(--m-fg3); font-weight: 500; }
+.mock-nav span.on { color: var(--m-fg); box-shadow: inset 0 -2px var(--m-accent); }
+.mock-search { margin: 8px; padding: 5px 8px; border: 1px solid var(--m-line); border-radius: 6px; color: var(--m-fg3); }
+.mock-stats { padding: 0 10px 6px; font-size: 11px; color: var(--m-fg3); }
+.mock-list { padding: 0 6px; overflow: hidden; }
+.m-group { margin: 4px 0 2px; display: flex; align-items: center; gap: 6px; }
+.m-pill { padding: 1px 8px; border-radius: 9px; background: var(--gc); color: #fff; font-weight: 600; font-size: 11px; }
+.m-count { color: var(--m-fg3); font-size: 11px; }
+.m-tab { display: flex; align-items: center; gap: 8px; height: 27px; padding: 0 8px; border-radius: 6px; white-space: nowrap; overflow: hidden; }
+.m-group + .m-tab, .m-in { margin-left: 6px; border-left: 2px solid var(--gc); border-radius: 0 6px 6px 0; }
+.m-tab.on { background: var(--m-active); }
+.m-tab.zz { opacity: 0.5; }
+.m-tab .t { overflow: hidden; text-overflow: ellipsis; }
+.m-tab .z { margin-left: auto; font-size: 10px; }
+.fav { width: 14px; height: 14px; border-radius: 3px; flex: none; background: var(--fc); color: #fff; font-size: 9px; font-weight: 700; display: grid; place-items: center; }
+.mock-page { flex: 1; padding: 1.5rem; display: flex; flex-direction: column; gap: 0.6rem; min-width: 0; }
+.mock-page i { display: block; height: 0.7rem; border-radius: 4px; background: var(--m-line); }
+.mock-page i.h { height: 1.4rem; width: 60%; margin-bottom: 0.4rem; }
+.mock-page i.b { height: 7rem; margin-top: 0.4rem; }
+@media (max-width: 520px) { .mock-page { display: none; } .mock-side { width: 100%; border: 0; } }
+
+/* ---------- features ---------- */
+.features { display: grid; gap: 1rem; }
+@media (min-width: 768px) { .features { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 960px) { .features { grid-template-columns: repeat(3, 1fr); } }
+.feature { background: var(--card); border-radius: var(--radius); box-shadow: 0 0 0 1px var(--line); padding: 1.25rem; }
+.feature .chip { width: 2.5rem; height: 2.5rem; border-radius: 0.6rem; background: var(--lime); color: #0a0a0a; display: grid; place-items: center; margin-bottom: 0.9rem; }
+.feature h3 { font-size: 1.2rem; margin: 0 0 0.4rem; }
+.feature p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+
+.private { background: var(--soft); border-radius: 1.25rem; padding: 1.75rem; display: grid; gap: 1rem; }
+@media (min-width: 768px) { .private { grid-template-columns: 1fr 1.4fr; padding: 2.25rem; align-items: center; } }
+.private h2 { font-size: clamp(1.6rem, 3.5vw, 2.1rem); margin: 0; }
+.private ul { margin: 0; padding-left: 1.2rem; color: var(--muted); }
+.private li + li { margin-top: 0.35rem; }
+.private a { font-weight: 600; }
+
+/* ---------- privacy policy ---------- */
+.prose { max-width: 44rem; padding: 2rem 0 1rem; }
+.prose h1 { font-size: clamp(2.2rem, 5vw, 3rem); margin: 0; }
+.prose .updated { color: var(--muted); margin: 0.75rem 0 2rem; }
+.prose h2 { font-size: 1.45rem; margin: 2.25rem 0 0.6rem; }
+.prose p, .prose li { color: color-mix(in oklab, var(--fg) 80%, transparent); }
+.prose ul { padding-left: 1.25rem; }
+.prose li + li { margin-top: 0.3rem; }
+.prose table { width: 100%; border-collapse: collapse; font-size: 0.95rem; margin: 0.5rem 0; }
+.prose th, .prose td { text-align: left; padding: 0.55rem 0.6rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+.prose th { font-weight: 600; }
+.prose code { font-size: 0.85em; background: var(--soft); padding: 0.1rem 0.35rem; border-radius: 4px; white-space: nowrap; }
+.prose .table-scroll { overflow-x: auto; }
