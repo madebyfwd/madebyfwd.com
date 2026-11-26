@@ -80,3 +80,14 @@
 .steps li { display: flex; gap: 0.75rem; align-items: flex-start; }
 .steps b { flex: none; width: 2rem; height: 2rem; border-radius: 50%; background: var(--lime); color: #0a0a0a; display: grid; place-items: center; font-family: var(--font-display); }
 .steps span { opacity: 0.85; padding-top: 0.2rem; }
+.at-hero .app-name { margin: 0 0 0.5rem; font-size: 1.6rem; }
+.at-hero .app-pills { margin: 0; }
+
+/* hero: "before" (tab chaos) behind, "after" (sidebar) in front */
+.duo { position: relative; padding: 2rem 0 2.5rem; }
+.duo-before { width: 78%; opacity: 0.95; }
+.duo-after { position: relative; width: 82%; margin: -32% 0 0 auto; }
+.duo .hand { position: absolute; font-size: 1.35rem; color: var(--fg); }
+.duo-before .hand { left: 0.25rem; top: -2.4rem; }
+.duo-after .hand { right: 0.25rem; bottom: -2.1rem; }
+.duo-before { position: relative; }
