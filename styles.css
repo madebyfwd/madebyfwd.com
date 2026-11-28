@@ -248,7 +248,6 @@ section { margin-bottom: 4.5rem; }
 
 .apps { display: grid; gap: 1rem; }
 @media (min-width: 768px) { .apps { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 960px) { .apps { grid-template-columns: repeat(3, 1fr); } }
 
 .app {
   position: relative;
